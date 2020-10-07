@@ -1,0 +1,76 @@
+<html>  
+<head>  
+        <title>Image Upload</title>
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <style>
+           .slidecontainer {
+             width: 50%;
+           }
+           body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+           .slider {
+             -webkit-appearance: none;
+             width: 30%;
+             height: 5px;
+             border-radius: 5px;
+             background: #d3d3d3;
+             outline: none;
+             opacity: 0.7;
+             -webkit-transition: .2s;
+             transition: opacity .2s;
+           }
+           
+           .slider:hover {
+             opacity: 1;
+           }
+           
+           .slider::-webkit-slider-thumb {
+             -webkit-appearance: none;
+             appearance: none;
+             width: 25px;
+             height: 25px;
+             border-radius: 50%;
+             background: #4CAF50;
+             cursor: pointer;
+           }
+           
+           .slider::-moz-range-thumb {
+             width: 25px;
+             height: 25px;
+             border-radius: 50%;
+             background: #4CAF50;
+             cursor: pointer;
+           }
+           form {
+      padding-left: 10%;
+      padding-top: 10%;
+  }
+  #gg{
+    color: gray;
+     font-family: "Raleway", sans-serif;
+    
+    opacity: 70%;
+  
+  }
+  hr.new4 {
+  border: 1px solid black;
+  opacity: 10%;
+}
+           </style>  
+</head>  
+<body class="w3-light-grey">  
+        <header class="w3-container w3-center w3-padding-32"> 
+                <h1><b>PhotoMaster</b></h1>
+                <p>A very basic photo-editor </p><br>
+                <p id="gg"> A Shravalogy's Product </p>
+                <hr class="new4">
+              </header>
+<p>File uploaded successfully</p>  
+<p>Click the image to download!</p> 
+<a href="{{url_for('static',filename=name)}}" download>
+<p><img src= "{{url_for('static',filename=name)}}" width="50%"></p></a>
+</body>  
+</html>
