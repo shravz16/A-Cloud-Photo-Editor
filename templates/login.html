@@ -1,0 +1,103 @@
+<html>
+   <head>
+      <title>Image Upload</title>
+      <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+      <style>
+         .slidecontainer {
+           width: 50%;
+         }
+         body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+         .slider {
+           -webkit-appearance: none;
+           width: 30%;
+           height: 5px;
+           border-radius: 5px;
+           background: #d3d3d3;
+           outline: none;
+           opacity: 0.7;
+           -webkit-transition: .2s;
+           transition: opacity .2s;
+         }
+         
+         .slider:hover {
+           opacity: 1;
+         }
+         
+         .slider::-webkit-slider-thumb {
+           -webkit-appearance: none;
+           appearance: none;
+           width: 25px;
+           height: 25px;
+           border-radius: 50%;
+           background: #4CAF50;
+           cursor: pointer;
+         }
+         
+         .slider::-moz-range-thumb {
+           width: 25px;
+           height: 25px;
+           border-radius: 50%;
+           background: #4CAF50;
+           cursor: pointer;
+         }
+         form {
+    padding-left: 10%;
+    padding-top: 1%;
+}
+#gg{
+  color: gray;
+   font-family: "Raleway", sans-serif;
+  
+  opacity: 70%;
+  
+
+}
+hr.new4 {
+  border: 1px solid black;
+  opacity: 10%;
+}
+         </style>
+   
+      
+      </head>
+      
+      <body class="w3-light-grey">
+          <header class="w3-container w3-center w3-padding-32"> 
+              <h1><b>PhotoMaster</b></h1>
+              <p>A very basic photo-editor </p><br>
+              <p id="gg"> A Shravalogy's Product </p>
+              <hr class="new4">
+            </header>
+        <form action = "http://localhost:5000/hi" method="post" enctype="multipart/form-data">
+         <p><input type="file"  accept="image/*" name="file" id="file" onchange="loadFile(event)" id="file"></p>
+        <br>
+        <br>
+        <p><img id="output" width="50%" /></p>
+        <br>
+        BRIGHTNESS: <input type="range" name="brig" min="0.0" max="5.0" class="slider" value="1.0" step="0.02">
+        <br>
+        <br>
+        SHARPEN: <input type="range" name="sharp" min="0.0" max="5.0" class="slider" value="1.0"step="0.02">
+
+        <br>
+        <br>
+        CONTRAST: <input type="range" name="cont" min="1.0" max="5.0" class="slider" value="1.0"step="0.02">
+        <br>
+        <br>
+        COLOR: <input type="range" name="col" min="0.0" max="5.0" class="slider" value="1.0"step="0.02">
+         <p><input type = "submit" value = "upload"></p>
+      </form>  
+      
+      <script>
+         var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+         };
+         </script>
+         
+      </body>
+</html>
