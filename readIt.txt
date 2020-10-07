@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------------------------------------------
+==================================================== PhotoMaster ==================================================
+-------------------------------------------------------------------------------------------------------------------
+
+
+Just a simple and a very basic photo-editor that manipulates the uploaded image.
+It stores the image in a cloud server.(since this is a localhost, it stores in your local device)
+...
+...
+...
+HOW TO USE:
+
+1) download.
+2) run the .py
+3 open http://127.0.0.1:5000/ in your browser.
+4) enjoy :) :P
+
+PS: If you face any issues while displaying image, remove the cache and refresh.
